@@ -49,7 +49,7 @@ function App() {
   // This state holds the explicit assignments made by the user
   const [assignments, setAssignments] = useState<{ [imageId: string]: string }>({});
   const [loading, setLoading] = useState(true);
-  const = useState(false);
+  // const = useState(false);
 
   const GET_PRODUCT_DATA_QUERY = `
     query getProduct($id: ID!) {
@@ -125,7 +125,7 @@ function App() {
       }
       if (activeVariantId) {
         if (!newMap[activeVariantId]) {
-          newMap[activeVariantId] =;
+          newMap[activeVariantId] = [];
         }
         newMap[activeVariantId].push(image.id);
       }
@@ -169,17 +169,13 @@ function App() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message |
-
-| "Failed to save mappings.");
+        throw new Error(errorData.message || "Failed to save mappings.");
       }
       
       toast.show("Variant images saved successfully!");
     } catch (error) {
       console.error("Save error:", error);
-      toast.show(error.message |
-
-| "An error occurred while saving.", { isError: true });
+      toast.show(error.message || "An error occurred while saving.", { isError: true });
     } finally {
       setSaving(false);
     }

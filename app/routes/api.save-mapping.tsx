@@ -21,9 +21,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
   const { productId, imageMap } = body as { productId: string; imageMap: VariantImageMap };
 
-  if (!productId |
-
-| typeof imageMap!== 'object') {
+  if (!productId || typeof imageMap!== 'object') {
     return json({ message: "Missing productId or imageMap" }, { status: 400 });
   }
 

@@ -50,6 +50,6 @@ export function prepareMetafield(
   imageMap: VariantImageMap
 ) {
   return {
-    metafields:,
+    metafields: [],
   };
 }

@@ -10,9 +10,7 @@ export const loader = async ({ request, params }: LoaderFunctionArgs) => {
 
   const { storefront } = await unauthenticated.storefront(
     // The shop domain is needed for unauthenticated requests
-    new URL(request.url).searchParams.get("shop") |
-
-| ""
+    new URL(request.url).searchParams.get("shop") || ""
   );
 
   const query = `
