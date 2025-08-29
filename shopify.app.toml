@@ -2,7 +2,7 @@
 
 client_id = "ba4a61939e3f8339c96d4af26477c254"
 name = "variant-image-automator"
-application_url = "https://covered-pb-door-fc.trycloudflare.com"
+application_url = "https://switching-screening-broad-para.trycloudflare.com"
 embedded = true
 handle = "variant-image-automator-3"
 
@@ -26,7 +26,7 @@ api_version = "2025-07"
 scopes = "write_products"
 
 [auth]
-redirect_urls = ["https://covered-pb-door-fc.trycloudflare.com/auth/callback", "https://covered-pb-door-fc.trycloudflare.com/auth/shopify/callback", "https://covered-pb-door-fc.trycloudflare.com/api/auth/callback"]
+redirect_urls = ["https://switching-screening-broad-para.trycloudflare.com/auth/callback", "https://switching-screening-broad-para.trycloudflare.com/auth/shopify/callback", "https://switching-screening-broad-para.trycloudflare.com/api/auth/callback"]
 
 [pos]
 embedded = false
